@@ -49,6 +49,14 @@ public class Menu {
         update=new JButton("Update Task");
         update.setBounds(50,240,150,50);
         frame.add(update);
+        update.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                update x=new update();
+                x.updat();
+            }
+        });
 
         view=new JButton("View Task");
         view.setBounds(50,310,150,50);
@@ -66,6 +74,14 @@ public class Menu {
         share=new JButton("Share Task");
         share.setBounds(50,380,150,50);
         frame.add(share);
+        share.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                Share x=new Share();
+                x.shar();
+            }
+        });
 
         frame.setSize(400, 600);
         frame.setResizable(false);
